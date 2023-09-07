@@ -20,6 +20,12 @@ const $tabPanels = document.querySelectorAll('[data-tab-panel]');
 let [$lastActiveTabPanel] = $tabPanels;
 let [$lastActiveTabBtn] = $tabBtns;
 
+window.addEventOnElements = ($elements, eventType, callback) => {
+  for (const $element of $elements) {
+    $element.addEventListener(eventType, callback);
+  }
+};
+
 addEventOnElements($tabBtns, 'click', function () {
   $lastActiveTabPanel.setAttribute('hidden', '');
   $lastActiveTabBtn.setAttribute('aria-selected', false);
@@ -35,6 +41,7 @@ addEventOnElements($tabBtns, 'click', function () {
 
   $lastActiveTabPanel = $currentTabPanel;
   $lastActiveTabBtn = this;
+  console.log('clicked');
 });
 
 // NAVIGATION WITH KEYS //
