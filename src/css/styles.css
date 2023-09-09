@@ -349,7 +349,7 @@ main {
 
 .img-holder {
   background-color: var(--image-background);
-  background-image: url('../images/image-placeholder.svg');
+  background-image: url('../images/placeholder.png');
   background-repeat: no-repeat;
   background-size: 30%;
   background-position: center;
@@ -830,9 +830,31 @@ main {
   margin-block-start: 24px;
 }
 
-/*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
+/*----- FOOTER -----*/
+
+.footer .logo {
+ display: none;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 12px;
+  padding: 16px;
+  border-block-start: 1px solid var(--outline);
+}
+
+.copyright {
+  opacity: 0.8;
+}
+
+.footer .edamam img {
+  width: 180px;
+}
+
+
 
 /*-----------------------------------*\
   #FILTER BAR
