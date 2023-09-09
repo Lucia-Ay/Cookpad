@@ -32,11 +32,27 @@ window.savedRecipe = function (element, recipeId) {
       window.localStorage.setItem(`CookPad${recipeId}`, JSON.stringify(data));
       element.classList.toggle('saved');
       element.classList.toggle('removed');
+      showNotification('Added to saved');
     });
     ACCESS_POINT = ROOT;
   } else {
     window.localStorage.removeItem(`CookPad${recipeId}`);
     element.classList.toggle('saved');
     element.classList.toggle('removed');
+    showNotification('Removed from saved');
   }
 };
+
+const $snackbarContainer = document.createElement('div');
+$snackbarContainer.classList.add('snackbar-container');
+document.body.appendChild($snackbarContainer);
+
+function showNotification(message) {
+  const $snackbar = document.createElement('div');
+  $snackbar.classList.add('snackbar');
+  $snackbar.innerHTML = `<p class="body-medium">${message}</p>`;
+  $snackbarContainer.appendChild($snackbar);
+  $snackbar.addEventListener('animationend', (e) => {
+    $snackbarContainer.removeChild($snackbar);
+  });
+}
