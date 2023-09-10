@@ -228,7 +228,7 @@ main {
   outline-color: var(--primary);
 }
 
-/*------ TYPOGRAPHY ------*/
+/**------ TYPOGRAPHY ------**/
 
 .display-large {
   font-family: var(--font-primary);
@@ -992,9 +992,7 @@ main {
   width: 180px;
 }
 
-/*-----------------------------------*\
-  #FILTER BAR
-\*-----------------------------------*/
+/*----- FILTER BAR -----*/
 
 /*----- RECIPE PAGE -----*/
 
