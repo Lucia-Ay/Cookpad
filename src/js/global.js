@@ -2,6 +2,12 @@
 
 import { fetchData } from './api.js';
 
+window.addEventOnElements = ($elements, eventType, callback) => {
+  for (const $element of $elements) {
+    $element.addEventListener(eventType, callback);
+  }
+};
+
 export const cardQueries = [
   ['field', 'uri'],
   ['field', 'label'],
