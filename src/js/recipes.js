@@ -154,9 +154,8 @@ const renderRecipe = (data) => {
                     </span>
 
                     <span class="label-medium">
-                    ${getTime(cookingTime).time || '<1'} ${
-      getTime(cookingTime).timeUnit
-    }
+                    ${getTime(cookingTime).time || '<1'} 
+                    ${getTime(cookingTime).timeUnit}
                     </span>
                 </div>
 
