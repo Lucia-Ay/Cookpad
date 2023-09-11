@@ -1000,7 +1000,6 @@ main {
 .filter-bar {
   position: fixed;
   top: 0;
-  bottom: 0;
   right: -400px;
   display: flex;
   flex-direction: column;
@@ -1042,7 +1041,7 @@ main {
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-width: none;
-  padding-block-end: 16px;
+  padding-block-end: 4px;
 }
 
 .filter-content::-webkit-scrollbar {
