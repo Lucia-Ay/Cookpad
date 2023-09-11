@@ -1000,14 +1000,15 @@ main {
 .filter-bar {
   position: fixed;
   top: 0;
+  bottom: 0;
   right: -400px;
   display: flex;
   flex-direction: column;
   max-width: 400px;
   width: 100%;
-  height: 100vh;
+  height: 100vh; 
   background-color: var(--background);
-  overflow: hidden;
+  overflow: hidden; /** todo: originally hidden **/
   visibility: hidden;
   transition: var(--transition-short);
   z-index: 6;
@@ -1039,8 +1040,13 @@ main {
 .filter-content {
   flex-grow: 1;
   overflow-y: auto;
+  overscroll-behavior: contain; 
   scrollbar-width: none;
-  padding-block-end: 4px;
+  padding-block-end: 16px;
+}
+
+.filter-content::-webkit-scrollbar {
+  display: none;
 }
 
 .filter-content .search-wrapper {
@@ -1094,6 +1100,7 @@ main {
   gap: 12px;
   padding: 24px;
   border-block-start: 1px solid var(--outline);
+  /** margin-top:35px; **/
 }
 
 .filter-actions .btn {
