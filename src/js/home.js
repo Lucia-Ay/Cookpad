@@ -86,7 +86,6 @@ const addTabContent = ($currentTabBtn, $currentTabPanel) => {
       ...cardQueries,
     ],
     function (data) {
-      console.log(data);
       $currentTabPanel.innerHTML = '';
 
       for (let i = 0; i < 12; i++) {
