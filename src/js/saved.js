@@ -15,6 +15,7 @@ $savedRecipeContainer.innerHTML = `
 `;
 
 const $gridList = document.createElement('div');
+$gridList.classList.add("grid-list")
 
 if (savedRecipes.length) {
   savedRecipes.map((savedRecipe, index) => {
