@@ -1000,7 +1000,6 @@ main {
 .filter-bar {
   position: fixed;
   top: 0;
-  bottom: 0;
   right: -400px;
   display: flex;
   flex-direction: column;
@@ -1008,7 +1007,7 @@ main {
   width: 100%;
   height: 100vh; 
   background-color: var(--background);
-  overflow: hidden; /** todo: originally hidden **/
+  overflow: hidden;
   visibility: hidden;
   transition: var(--transition-short);
   z-index: 6;
@@ -1042,7 +1041,7 @@ main {
   overflow-y: auto;
   overscroll-behavior: contain; 
   scrollbar-width: none;
-  padding-block-end: 16px;
+  padding-block-end: 6px;
 }
 
 .filter-content::-webkit-scrollbar {
@@ -1100,7 +1099,7 @@ main {
   gap: 12px;
   padding: 24px;
   border-block-start: 1px solid var(--outline);
-  /** margin-top:35px; **/
+  margin-top: -10px;
 }
 
 .filter-actions .btn {
