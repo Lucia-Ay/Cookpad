@@ -993,8 +993,6 @@ main {
   width: 180px;
 }
 
-/*----- FILTER BAR -----*/
-
 /*----- RECIPE PAGE -----*/
 
 /** FILTER BAR **/
@@ -1002,6 +1000,7 @@ main {
 .filter-bar {
   position: fixed;
   top: 0;
+  bottom: 0;
   right: -400px;
   display: flex;
   flex-direction: column;
@@ -1009,7 +1008,7 @@ main {
   width: 100%;
   height: 100vh;
   background-color: var(--background);
-  overflow: scroll;
+  overflow: hidden;
   visibility: hidden;
   transition: var(--transition-short);
   z-index: 6;
