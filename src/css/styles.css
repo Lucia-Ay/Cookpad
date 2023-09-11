@@ -1039,13 +1039,8 @@ main {
 .filter-content {
   flex-grow: 1;
   overflow-y: auto;
-  overscroll-behavior: contain;
   scrollbar-width: none;
   padding-block-end: 4px;
-}
-
-.filter-content::-webkit-scrollbar {
-  display: none;
 }
 
 .filter-content .search-wrapper {
